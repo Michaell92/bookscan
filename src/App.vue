@@ -10,15 +10,9 @@
 <script>
 import TheHeader from "./components/TheHeader.vue";
 import TheFooter from "./components/TheFooter.vue";
-import { useBookStore } from "./stores/books.js"
 
 export default {
-  components: { TheHeader, TheFooter },
-
-  setup() {
-    const store = useBookStore();
-    console.log(store)
-  }
+  components: { TheHeader, TheFooter }
 };
 </script>
 
@@ -46,8 +40,12 @@ export default {
   overflow: hidden;
 }
 
+.main-card:hover {
+  overflow: auto;
+}
+
 .fa-star path,
-.fa-star-half-alt path {
+.fa-star-half-stroke path {
   color: gold;
 }
 
@@ -69,8 +67,7 @@ export default {
 
 .container {
   max-width: 1400px;
-  margin: auto;
-  padding: 50px;
+  padding: 2rem 5rem;
 }
 
 a {

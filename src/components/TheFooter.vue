@@ -1,8 +1,6 @@
 <template>
   <footer>
-    <span>Created by Michael</span>
     <span>&copy; 2021 Bookscan, All Rights Reserved</span>
-    <a>Github</a>
   </footer>
 </template>
 
@@ -16,8 +14,7 @@ footer {
   margin-top: 20px;
 }
 
-span,
-a {
+span {
   background: rgb(26, 48, 48);
   color: rgb(235, 211, 211);
   font-size: 1.3rem;

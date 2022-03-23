@@ -10,7 +10,6 @@ import { faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { axios } from "axios";
 
 library.add(faStar);
 library.add(faStarHalfAlt);
@@ -23,6 +22,5 @@ app.component("font-awesome-icon", FontAwesomeIcon);
 
 app.use(createPinia());
 app.use(router);
-app.use(axios);
 
 app.mount("#app");

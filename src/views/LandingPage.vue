@@ -234,7 +234,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 20px;
   height: 80px;
   background-color: rgb(206, 239, 239);
 }
@@ -366,7 +365,7 @@ button {
   height: 30px;
   width: 250px;
   outline: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
 }
 

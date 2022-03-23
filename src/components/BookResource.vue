@@ -41,6 +41,7 @@
 </template>
 
 <script>
+import { ref, computed } from 'vue'
 export default {
   props: {
     id: {
@@ -80,31 +81,22 @@ export default {
       required: false,
     },
   },
-  data() {
-    return {
-      hoverActive: false,
-    };
-  },
-  watch: {},
-  computed: {
-    categoriesFinal() {
-      if (this.categories) return this.categories.join(", ");
+  setup(props) {
+    const hoverActive = ref(false)
+
+    const categoriesFinal = computed(() => {
+      if (props.categories) return props.categories.join(", ");
       return "";
-    },
-    authorsFinal() {
-      if (this.authors) return this.authors.join(", ");
+    })
+    const authorsFinal = computed(() => {
+      if (props.authors) return props.authors.join(", ");
       return "";
-    },
-    ratingFloor() {
-      return Math.floor(this.averageRating);
-    },
-    reviewLink() {
-      return `https://books.google.com/books?id=${this.id}&sitesec=reviews`;
-    },
-  },
-  methods: {
-    // Resize card on hover
-  },
+    })
+    const ratingFloor = computed(() => Math.floor(props.averageRating))
+    const reviewLink = computed(() => `https://books.google.com/books?id=${props.id}&sitesec=reviews`)
+
+    return { hoverActive, categoriesFinal, authorsFinal, ratingFloor, reviewLink }
+  }
 };
 </script>
 
@@ -122,7 +114,7 @@ export default {
   border-radius: 3px;
 }
 
-.wrapper:hover .card {
+.wrapper:hover .main-card {
   width: 195px;
   height: 375px;
   z-index: 1;
@@ -190,6 +182,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.stars svg path {
+  color: red;
 }
 
 #ratingNumber {

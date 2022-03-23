@@ -115,7 +115,7 @@ export default {
       try {
         const response = await fetch(bookApi.value);
         const data = await response.json();
-        console.log(data.volumeInfo)
+
         Object.assign(book, data.volumeInfo)
       } catch (err) {
         console.log(err);
