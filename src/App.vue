@@ -66,8 +66,7 @@ export default {
 }
 
 .container {
-  max-width: 1400px;
-  padding: 2rem 5rem;
+  padding: 1rem 5rem;
 }
 
 a {
@@ -89,5 +88,11 @@ button {
 
 .spanLead {
   margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 950px) {
+  .container {
+    padding: 1rem;
+  }
 }
 </style>

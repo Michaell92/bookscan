@@ -36,13 +36,28 @@ img {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 220px;
 }
 .nav-text {
   /* background: rgb(26, 48, 48); */
-  color: rgb(74, 58, 124);
+  color: rgb(72, 56, 119);
   font-size: 1.7rem;
   font-weight: bold;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 950px) {
+  .container {
+    padding: 1rem 3rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    padding: 1rem;
+  }
+
+  nav {
+    justify-content: space-around;
+  }
 }
 </style>

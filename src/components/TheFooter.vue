@@ -20,5 +20,6 @@ span {
   font-size: 1.3rem;
   font-weight: bold;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
 }
 </style>

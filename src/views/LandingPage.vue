@@ -376,4 +376,32 @@ button {
 #search-type {
   padding-left: 20px;
 }
+
+@media screen and (max-width: 950px) {
+  #listPages {
+    margin-right: 100px;
+  }
+
+  #top-nav {
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+  }
+
+  #top-nav div:first-child {
+    flex-direction: column;
+  }
+
+  #searchBar {
+    width: 100%;
+  }
+
+  #search-type {
+    padding: 1rem 0;
+  }
+
+  #books {
+    justify-content: center;
+  }
+}
 </style>
